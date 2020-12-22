@@ -8,7 +8,7 @@ const cors = require("cors");
 const app = express();
 
 const authRoutes = require("./routes/auth.js");
-
+const userRoutes = require("./routes/user");
 
 // DB connections
 mongoose.connect(process.env.DATABASE, {
@@ -27,6 +27,7 @@ app.use(cors());
 
 // Routes
 app.use("/api", authRoutes);
+app.use("/api", userRoutes);
 
 // Port
 const port = process.env.PORT || 8000;
