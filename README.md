@@ -2,7 +2,6 @@
 
 ## A t-shirt store using MongoDB, Express, React and Node
 
-To download all the dependencies and components download the file `package.json` and use command: `npm install`
 
 ### The project structure is as follows:
 
@@ -17,6 +16,8 @@ To download all the dependencies and components download the file `package.json`
    > |───routes: Contains the urls routing for the app
    > └───app.js: This is the entry point for the backend. This file calls the models, routes, controllers, middlewares and connect the DB to server
    > ```
+
+   To download all the dependencies and components download the file `package.json` and use command: `npm install`
 
 2. **Front End:**  
    Folder **projfrontend** contains the frontend logic using React  
