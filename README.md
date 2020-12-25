@@ -15,8 +15,7 @@ To download all the dependencies and components download the file `package.json`
    > |───controllers: Contains the logic to process the routes
    > |───models: Contains the database Schema
    > |───routes: Contains the urls routing for the app
-   > └───app.js: This is the entry point for the backend. This file calls the models, routes, controllers, middlewares and connect the DB to 
-   > server
+   > └───app.js: This is the entry point for the backend. This file calls the models, routes, controllers, middlewares and connect the DB to server
    > ```
 
 2. **Front End:**  
