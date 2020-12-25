@@ -1,3 +1,4 @@
 /testback
 /testfront
 node_modules/
+/projbackend/.env
