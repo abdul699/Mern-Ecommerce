@@ -80,7 +80,7 @@ exports.photo = (req, res, next) => {
 
 // delete 
 exports.removeProduct = (req, res) => {
-    let product = req.product;
+    const product = req.product;
     product.remove((err, deletedProduct) => {
         if(err) {
             res.status(400).json({

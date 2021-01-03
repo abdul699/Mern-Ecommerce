@@ -28,7 +28,7 @@ router.post(
 
 // read
 router.get("/category/:categoryId", getCategory);
-router.get("/category/all", getAllCategory);
+router.get("/categories", getAllCategory);
 
 // update
 router.put(

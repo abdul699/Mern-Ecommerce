@@ -27,14 +27,14 @@ router.get("/product/:productId", getProduct);
 router.get("/product/photo/:productId", photo);
 
 // delete
-router.delete("product/:productId/:userId", isSignedIn, isAuthenticated, isAdmin, removeProduct);
+router.delete("/product/:productId/:userId", isSignedIn, isAuthenticated, isAdmin, removeProduct);
 
 // update
-router.put("product/:productId/:userId", isSignedIn, isAuthenticated, isAdmin, updateProduct);
+router.put("/product/:productId/:userId", isSignedIn, isAuthenticated, isAdmin, updateProduct);
 
 // listing route
 router.get("/products", getAllProduct);
 
-router.get("products/categories", getAllUniqueCategories);
+router.get("/products/categories", getAllUniqueCategories);
 
 module.exports = router;

@@ -1,12 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Menu from "./Menu";
+
 
 const Base = ({
   title = "My Title",
   description = "My desription",
   className = "bg-dark text-white p-4",
   children
-}) => (
+}) => {
+
+  const goContactPage = () => (
+    <div className="mt-5">
+        <Link className="btn btn-warning btn-lg" to="/contact">Contact Us</Link>
+    </div>
+)
+
+
+  return (
   <div>
     <Menu />
     <div className="container-fluid">
@@ -19,7 +30,7 @@ const Base = ({
     <footer className="footer bg-dark mt-auto">
       <div className="container-fluid bg-success text-white text-center py-3">
         <h4>If you got any questions, feel free to reach out!</h4>
-        <button className="btn btn-warning btn-lg">Contact Us</button>
+        {goContactPage()}
       </div>
       <div className="container">
         <span className="text-muted">
@@ -28,6 +39,7 @@ const Base = ({
       </div>
     </footer>
   </div>
-);
+  )
+};
 
 export default Base;
