@@ -12,7 +12,7 @@ const Base = ({
 
   const goContactPage = () => (
     <div className="mt-5">
-        <Link className="btn btn-warning btn-lg" to="/contact">Contact Us</Link>
+        <Link className="btn rounded btn-warning  btn-lg" to="/contact">Contact Us</Link>
     </div>
 )
 

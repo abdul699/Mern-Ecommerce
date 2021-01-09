@@ -25,7 +25,7 @@ exports.createProduct = (req, res) => {
 
     form.parse(req, (err, fields, file) => {
         if(err) {
-            res.status(400).json({
+            return res.status(400).json({
                 error: "problem loading image"
             });
         }
@@ -65,13 +65,13 @@ exports.createProduct = (req, res) => {
 
 // get
 exports.getProduct = (req, res) => {
-    req.product.photo = undefined
+    res.product.photo = undefined;
     return res.json(req.product)
 }
 
 // middleware
 exports.photo = (req, res, next) => {
-    if(!req.product.photo.data) {
+    if(req.product.photo.data) {
         res.set("Content-Type", req.product.photo.contentType)
         return res.send(req.product.photo.data)
     }

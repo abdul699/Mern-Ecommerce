@@ -11,24 +11,25 @@ const AdminDashBoard = () => {
 
     const adminLeftSide = () => {
         return (
-            <div className="card">
-                <h4 className="card-header bg-dark text-white">Admin Navigation</h4>
-                <ul className="list-group">
-                    <li className="list-group-item">
-                        <Link to="/admin/create/category" className="nav-link text-success">Create catergory</Link>
+            <div className="card border-primary">
+                <h4 className="card-header bg-dark text-white">Navigations</h4>
+                <ul className="list-group list-group-flush">
+                    <li className="list-group-item list-group-item-action">
+                        <Link to="/admin/create/category" className="nav-link text-success font-weight-bold">Create Catergory</Link>
                     </li>
-                    <li className="list-group-item">
+                    <li className="list-group-item list-group-item-action">
+                        <Link to="/admin/categories" className="nav-link text-success">Manage Categories</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
                         <Link to="/admin/create/product" className="nav-link text-success">Create Product</Link>
                     </li>
-                    <li className="list-group-item">
-                        <Link to="/admin/orders" className="nav-link text-success">Manage Order</Link>
-                    </li> 
-                    <li className="list-group-item">
+                    <li className="list-group-item list-group-item-action">
                         <Link to="/admin/products" className="nav-link text-success">Manage Products</Link>
                     </li>
-                    <li className="list-group-item">
-                        <Link to="/admin/categories" className="nav-link text-success">Manage categories</Link>
-                    </li>
+                    <li className="list-group-item list-group-item-action">
+                        <Link to="/admin/orders" className="nav-link text-success">Manage Order</Link>
+                    </li> 
+                    
 
                 </ul>
             </div>
@@ -37,14 +38,14 @@ const AdminDashBoard = () => {
 
     const adminRightSide = () => {
         return (
-            <div className="card mb-4 text-left">
-                <h4 className="card-header bg-dark text-white">Admin Information</h4>
+            <div className="card mb-4 border-primary">
+                <h4 className="card-header bg-dark text-white">My Information</h4>
                 <ul className="list-group">
-                    <li className="list-group-item">
-                        <p className="text-success"><span className="badge">Name:</span> {name}</p>
+                    <li className="list-group-item list-group-item-action">
+                        <p className="text-success"><span className="badge bg-warning text-dark">Name: </span> {name}</p>
                     </li>
-                    <li className="list-group-item">
-                        <p className="text-success"><span className="badge">Email:</span> {email}</p>
+                    <li className="list-group-item list-group-item-action">
+                        <p className="text-success"><span className="badge bg-warning text-dark">Email:</span> {email}</p>
                     </li>
                 </ul>
             </div>
@@ -53,7 +54,7 @@ const AdminDashBoard = () => {
     return (
         <Base 
             title="Welcome to admin area" 
-            description="Manage all of your project here"
+            description="You can manage Products, Categories and Orders here"
             className="container p-4"
         >
             <div className="row">
