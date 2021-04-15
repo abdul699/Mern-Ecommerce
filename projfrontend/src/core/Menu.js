@@ -57,7 +57,7 @@ const Menu = ({ history }) => (
             className="nav-link"
             to="/signup"
           >
-            Signup
+            Sign Up
           </Link>
         </li>
 
@@ -67,7 +67,7 @@ const Menu = ({ history }) => (
             className="nav-link"
             to="/signin"
           >
-            Sign In
+            Log In
           </Link>
         </li>
         </Fragment>

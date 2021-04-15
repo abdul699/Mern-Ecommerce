@@ -44,35 +44,35 @@ const Signup = () => {
       <div className="row">
         <div className="col-md-6 offset-sm-3">
           <form>
-            <div className="form-group">
-              <label className="text-light mt-2 mb-2">Name</label>
+            <div className="form-group mt-3 mb-3">
               <input
                 className="form-control"
                 onChange={handleChange("name")}
                 type="text"
                 value={name}
+                placeholder="Name"
               />
             </div>
-            <div className="form-group">
-              <label className="text-light mt-2 mb-2">Email</label>
+            <div className="form-group mt-3 mb-3">
               <input
                 className="form-control"
                 onChange={handleChange("email")}
                 type="email"
                 value={email}
+                placeholder="Email"
               />
             </div>
 
-            <div className="form-group">
-              <label className="text-light mt-2 mb-2">Password</label>
+            <div className="form-group mt-3 mb-3">
               <input
                 onChange={handleChange("password")}
                 className="form-control"
                 type="password"
                 value={password}
+                placeholder="Password"
               />
             </div>
-            <button onClick={onSubmit} className="btn btn-success btn-block form-control mt-4">
+            <button onClick={onSubmit} className="btn rounded btn-success btn-block form-control mt-4">
               Submit
             </button>
           </form>
@@ -113,11 +113,10 @@ const Signup = () => {
   };
 
   return (
-    <Base title="Sign up page" description="A page for user to sign up!">
+    <Base title="Join T-Shirt Store" description="">
       {successMessage()}
       {errorMessage()}
       {signUpForm()}
-      <p className="text-white text-center">{JSON.stringify(values)}</p>
     </Base>
   );
 };

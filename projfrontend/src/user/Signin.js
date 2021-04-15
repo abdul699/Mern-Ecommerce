@@ -84,26 +84,26 @@ const Signin = () => {
       <div className="row">
         <div className="col-md-6 offset-sm-3 text-left">
           <form>
-            <div className="form-group">
-              <label className="text-light mt-2 mb-2">Email</label>
+            <div className="form-group mt-3 mb-3">
               <input
                 onChange={handleChange("email")}
                 value={email}
                 className="form-control"
                 type="email"
+                placeholder="Email"
               />
             </div>
 
-            <div className="form-group">
-              <label className="text-light mt-2 mb-2">Password</label>
+            <div className="form-group mt-3 mb-3">
               <input
                 onChange={handleChange("password")}
                 value={password}
                 className="form-control"
                 type="password"
+                placeholder="Password"
               />
             </div>
-            <button onClick={onSubmit} className="btn btn-success btn-block form-control mt-4">
+            <button onClick={onSubmit} className="btn rounded btn-success btn-block form-control mt-4">
                 Submit
               </button>
           </form>
@@ -113,12 +113,11 @@ const Signin = () => {
   };
 
   return (
-    <Base title="Sign In page" description="A page for user to sign in!">
+    <Base title="Log In" description="">
       {loadingMessage()}
       {errorMessage()}
       {signInForm()}
       {performRedirect()}
-      <p className="text-white text-center">{JSON.stringify(values)}</p>
     </Base>
   );
 };

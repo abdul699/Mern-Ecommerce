@@ -1,4 +1,4 @@
-const addItemToCart = (item, next) => {
+export const addItemToCart = (item, next) => {
     let cart = []
     if(typeof window !== undefined) {
         if(localStorage.getItem("cart")) {
@@ -21,4 +21,27 @@ export const loadCart = () => {
     }
 }
 
-export default addItemToCart
+export const removeItemFromCart = (productId) => {
+    let cart = []
+    if(typeof window !== undefined) {
+        if(localStorage.getItem("cart")) {
+            cart = JSON.parse(localStorage.getItem("cart"))
+        }
+        cart.map((product, index) => {
+            if(product._id === productId) {
+                cart.splice(index, 1)
+            }
+        })
+        localStorage.setItem("cart", JSON.stringify(cart))
+    }
+    return cart;
+}
+
+export const emptyCart = next => {
+    if(typeof window !== undefined) {
+        localStorage.removeItem("cart");
+        let cart = [];
+        localStorage.setItem("cart", JSON.stringify(cart))
+        next();
+    }
+}
