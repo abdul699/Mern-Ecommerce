@@ -6,7 +6,7 @@ const ImageHelper = ({product}) => {
     ? `${API}product/photo/${product._id}`
     : `https://media.gettyimages.com/photos/indian-bollywood-actors-kriti-sanon-and-varun-dhawan-make-an-during-picture-id497794866?s=2048x2048`;
     return (
-        <div className="rounded border border-success p-2">
+        <div className="rounded">
             <img
                 src = {imageUrl}
                 alt="Photo"

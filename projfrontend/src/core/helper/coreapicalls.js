@@ -5,5 +5,7 @@ export const getProducts = () => {
     .then(response => {
         return response.json();
     })
-    .catch(err => console.log(err))
+    .catch(err =>  {
+        console.log(err)
+    })
 }
